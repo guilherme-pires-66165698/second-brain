@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  obsidian:
+    image: ghcr.io/sytone/obsidian-remote:latest
+    container_name: obsidian
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/vaults/second-brain
+      - obsidian-config:/config
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Lisbon
+      - DOCKER_MODS=linuxserver/mods:universal-git
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  git-sync:
+    image: alpine/git:latest
+    container_name: obsidian-git-sync
+    restart: unless-stopped
+    volumes:
+      - ./:/repo
+    environment:
+      - GIT_SYNC_INTERVAL=300
+    entrypoint: /bin/sh
+    command: >
+      -c "
+      cd /repo &&
+      git config --global --add safe.directory /repo &&
+      while true; do
+        git pull --rebase || true
+        git add -A
+        git diff --cached --quiet || git commit -m 'auto-sync: $(date +%Y-%m-%d_%H:%M)'
+        git push || true
+        sleep 300
+      done
+      "
+
+volumes:
+  obsidian-config:

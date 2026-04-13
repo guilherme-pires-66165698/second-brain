@@ -2,14 +2,33 @@
 
 Personal Knowledge Management for Software Development.
 
-## Quick Setup (WSL)
+## Installation Options
+
+### Option 1: Docker (Recommended)
+
+Run Obsidian in browser with auto Git sync:
+
+```bash
+git clone https://github.com/guilherme-pires-66165698/second-brain.git
+cd second-brain
+docker-compose up -d
+```
+
+Access: http://localhost:8080
+
+**Features:**
+- Obsidian in browser
+- Auto-sync with GitHub every 5 minutes
+- No local installation needed
+
+### Option 2: WSL + Windows Obsidian
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/guilherme-pires-66165698/second-brain/main/scripts/setup-wsl.sh | bash
 source ~/.bashrc
 ```
 
-**Commands after setup:**
+**Commands:**
 | Command | Action |
 |---------|--------|
 | `brain` | Go to ~/second-brain |
@@ -65,8 +84,6 @@ In Copilot Chat, you can reference your knowledge base:
 ---
 
 ## File Reference Guide
-
-When helping me with code, consult these files based on the task:
 
 ### Always Read First
 - **README.md** (this file) - Overview and preferences
