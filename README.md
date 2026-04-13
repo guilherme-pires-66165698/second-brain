@@ -2,7 +2,36 @@
 
 Personal Knowledge Management for Software Development.
 
-## For GitHub Copilot - File Reference Guide
+## Setup Copilot in Your Projects
+
+Add this file to any project: `.github/copilot-instructions.md`
+
+```markdown
+# Copilot Instructions
+
+Reference my second-brain for all coding tasks:
+https://github.com/guilherme-pires-66165698/second-brain
+
+## Before Writing Code
+1. Read README.md for my preferences
+2. Check 03-Resources/Languages/ for language patterns
+3. Check 03-Resources/Frameworks/ for framework guides
+4. Check 02-Areas/Development/coding-standards.md for standards
+
+## My Preferences
+- Type hints/annotations always
+- Functional patterns when appropriate
+- SOLID principles
+- Error handling required
+- Unit tests for new functions
+
+## End of Session
+Capture learnings using Templates/lesson-learned.md
+```
+
+---
+
+## File Reference Guide
 
 When helping me with code, consult these files based on the task:
 
@@ -40,10 +69,15 @@ When helping me with code, consult these files based on the task:
 | Directory | Purpose |
 |-----------|---------|
 | .github/ | Copilot and GitHub configs |
-| 00-Inbox/ | Unsorted notes |
+| 00-Inbox/ | Unsorted notes and capture prompt |
 | 01-Projects/ | Project documentation |
 | 02-Areas/Development/ | Coding standards |
 | 03-Resources/Languages/ | Language guides |
 | 03-Resources/Frameworks/ | Framework guides |
 | 03-Resources/Tools/ | Tool configs |
 | 04-Archive/ | Completed/old projects |
+| Templates/ | Note templates |
+
+## Self-Improvement
+
+See `02-Areas/Development/SELF_IMPROVEMENT.md` for how to keep this knowledge base updated.
