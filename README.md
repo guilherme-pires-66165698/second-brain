@@ -2,9 +2,24 @@
 
 Personal Knowledge Management for Software Development.
 
-## For GitHub Copilot
+## For GitHub Copilot - File Reference Guide
 
-When working on my projects, use this repository as context:
+When helping me with code, consult these files based on the task:
+
+### Always Read First
+- **README.md** (this file) - Overview and preferences
+- **.github/copilot-instructions.md** - Detailed coding instructions
+
+### By Task Type
+
+| Task | Files to Read |
+|------|---------------|
+| **New Project Setup** | 01-Projects/templates/PROJECT_TEMPLATE.md |
+| **Code Review** | 02-Areas/Development/coding-standards.md |
+| **Python Code** | 03-Resources/Languages/python.md |
+| **TypeScript Code** | 03-Resources/Languages/typescript.md |
+| **API Development** | 03-Resources/Frameworks/fastapi.md |
+| **Working on specific project** | 01-Projects/[project-name].md |
 
 ### My Coding Preferences
 - Clean code with type hints/annotations
@@ -20,17 +35,15 @@ When working on my projects, use this repository as context:
 - **TypeScript**: ESLint, Prettier, strict mode
 - **Infrastructure**: Docker, Proxmox, Tailscale
 
-### Project Documentation
-Check 01-Projects/ for detailed documentation of each project including:
-- Architecture decisions
-- Key components
-- API endpoints
-- Environment setup
+### Directory Structure
 
-### Coding Standards
-See 02-Areas/Development/coding-standards.md for detailed standards.
-
-### Reference Material
-- 03-Resources/Languages/ - Language-specific patterns
-- 03-Resources/Frameworks/ - Framework guides
-- 03-Resources/Tools/ - Tool configurations
+| Directory | Purpose |
+|-----------|---------|
+| .github/ | Copilot and GitHub configs |
+| 00-Inbox/ | Unsorted notes |
+| 01-Projects/ | Project documentation |
+| 02-Areas/Development/ | Coding standards |
+| 03-Resources/Languages/ | Language guides |
+| 03-Resources/Frameworks/ | Framework guides |
+| 03-Resources/Tools/ | Tool configs |
+| 04-Archive/ | Completed/old projects |
