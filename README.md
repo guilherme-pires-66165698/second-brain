@@ -20,9 +20,17 @@ source ~/.bashrc
 
 ---
 
-## Setup Copilot in Your Projects
+## Install GitHub Copilot
 
-Add this file to any project: `.github/copilot-instructions.md`
+### 1. VS Code Extension
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X`)
+3. Search "GitHub Copilot"
+4. Install **GitHub Copilot** and **GitHub Copilot Chat**
+5. Sign in with your GitHub account
+
+### 2. Configure Copilot for Your Projects
+Add `.github/copilot-instructions.md` to any project:
 
 ```markdown
 # Copilot Instructions
@@ -45,6 +53,13 @@ https://github.com/guilherme-pires-66165698/second-brain
 
 ## End of Session
 Capture learnings using Templates/lesson-learned.md
+```
+
+### 3. Use Copilot with Second Brain
+In Copilot Chat, you can reference your knowledge base:
+
+```
+@workspace Read my second-brain preferences from https://github.com/guilherme-pires-66165698/second-brain
 ```
 
 ---
