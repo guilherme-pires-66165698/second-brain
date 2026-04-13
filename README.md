@@ -2,6 +2,24 @@
 
 Personal Knowledge Management for Software Development.
 
+## Quick Setup (WSL)
+
+```bash
+curl -sSL https://raw.githubusercontent.com/guilherme-pires-66165698/second-brain/main/scripts/setup-wsl.sh | bash
+source ~/.bashrc
+```
+
+**Commands after setup:**
+| Command | Action |
+|---------|--------|
+| `brain` | Go to ~/second-brain |
+| `brain-sync` | Sync with GitHub |
+| `brain-daily` | Create daily note |
+
+**Obsidian (Windows):** Open as vault `\\wsl$\Ubuntu\home\<user>\second-brain`
+
+---
+
 ## Setup Copilot in Your Projects
 
 Add this file to any project: `.github/copilot-instructions.md`
