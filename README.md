@@ -1,18 +1,36 @@
 # Second Brain
 
-Personal Knowledge Management using the PARA method.
+Personal Knowledge Management for Software Development.
 
-## Structure
+## For GitHub Copilot
 
-- **00-Inbox/** - Capture everything here first
-- **01-Projects/** - Active projects with deadlines
-- **02-Areas/** - Ongoing responsibilities (Health, Finance, Work, etc.)
-- **03-Resources/** - Topics of interest (references, guides)
-- **04-Archive/** - Completed/inactive items
-- **Templates/** - Note templates
+When working on my projects, use this repository as context:
 
-## Quick Start
+### My Coding Preferences
+- Clean code with type hints/annotations
+- Functional programming patterns when appropriate
+- SOLID principles
+- Composition over inheritance
+- Self-documenting code, minimal comments
+- Always include error handling
+- Write unit tests for new functions
 
-1. Capture new notes in 00-Inbox/
-2. Process inbox regularly - move to Projects, Areas or Resources
-3. Archive completed projects
+### Tech Stack
+- **Python**: PEP 8, black, ruff, FastAPI, Pydantic
+- **TypeScript**: ESLint, Prettier, strict mode
+- **Infrastructure**: Docker, Proxmox, Tailscale
+
+### Project Documentation
+Check 01-Projects/ for detailed documentation of each project including:
+- Architecture decisions
+- Key components
+- API endpoints
+- Environment setup
+
+### Coding Standards
+See 02-Areas/Development/coding-standards.md for detailed standards.
+
+### Reference Material
+- 03-Resources/Languages/ - Language-specific patterns
+- 03-Resources/Frameworks/ - Framework guides
+- 03-Resources/Tools/ - Tool configurations
