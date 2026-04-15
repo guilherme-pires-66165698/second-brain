@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {"id": "title", "type": "text", "x": 400, "y": -60, "width": 400, "height": 50, "text": "# Cyclops Frontend - Full Call Graph"},
+
+    {"id": "g-pages", "type": "group", "x": 0, "y": 0, "width": 500, "height": 140, "label": "Pages (Entry Points)"},
+    {"id": "page-home", "type": "text", "x": 20, "y": 40, "width": 140, "height": 50, "text": "**page.tsx**\n(root)", "color": "1"},
+    {"id": "page-downloads", "type": "text", "x": 180, "y": 40, "width": 140, "height": 50, "text": "**downloads**\n/page.tsx", "color": "1"},
+    {"id": "page-signin", "type": "text", "x": 340, "y": 40, "width": 140, "height": 50, "text": "**sign-in**\n/page.tsx", "color": "1"},
+
+    {"id": "g-layout", "type": "group", "x": 520, "y": 0, "width": 280, "height": 140, "label": "Layouts"},
+    {"id": "layout-locale", "type": "text", "x": 540, "y": 40, "width": 120, "height": 50, "text": "[locale]\nlayout.tsx", "color": "3"},
+    {"id": "layout-root", "type": "text", "x": 670, "y": 40, "width": 120, "height": 50, "text": "(root)\nlayout.tsx", "color": "3"},
+
+    {"id": "g-smart", "type": "group", "x": 0, "y": 160, "width": 600, "height": 120, "label": "Smart Components"},
+    {"id": "comp-home", "type": "text", "x": 20, "y": 200, "width": 120, "height": 50, "text": "**Home.tsx**\n(14 deps)", "color": "4"},
+    {"id": "comp-downloads", "type": "text", "x": 160, "y": 200, "width": 120, "height": 50, "text": "**Downloads**\n(6 deps)", "color": "4"},
+    {"id": "comp-signin", "type": "text", "x": 300, "y": 200, "width": 120, "height": 50, "text": "**SignIn**\n(2 deps)", "color": "4"},
+    {"id": "comp-navbar", "type": "text", "x": 440, "y": 200, "width": 120, "height": 50, "text": "**Navbar**\n(4 deps)", "color": "4"},
+
+    {"id": "g-ui", "type": "group", "x": 0, "y": 300, "width": 900, "height": 180, "label": "UI Components"},
+    {"id": "ui-button", "type": "text", "x": 20, "y": 340, "width": 90, "height": 40, "text": "Button"},
+    {"id": "ui-modal", "type": "text", "x": 120, "y": 340, "width": 90, "height": 40, "text": "Modal"},
+    {"id": "ui-table", "type": "text", "x": 220, "y": 340, "width": 90, "height": 40, "text": "Table"},
+    {"id": "ui-form", "type": "text", "x": 320, "y": 340, "width": 100, "height": 40, "text": "DynamicForm"},
+    {"id": "ui-accordion", "type": "text", "x": 430, "y": 340, "width": 90, "height": 40, "text": "Accordion"},
+    {"id": "ui-spinner", "type": "text", "x": 530, "y": 340, "width": 80, "height": 40, "text": "Spinner"},
+    {"id": "ui-tag", "type": "text", "x": 620, "y": 340, "width": 70, "height": 40, "text": "Tag"},
+    {"id": "ui-docprev", "type": "text", "x": 700, "y": 340, "width": 90, "height": 40, "text": "DocPreview"},
+    {"id": "ui-inputs", "type": "text", "x": 20, "y": 400, "width": 100, "height": 40, "text": "Inputs (5)"},
+    {"id": "ui-icons", "type": "text", "x": 130, "y": 400, "width": 100, "height": 40, "text": "Icons (15)"},
+    {"id": "ui-images", "type": "text", "x": 240, "y": 400, "width": 90, "height": 40, "text": "Images"},
+    {"id": "ui-avatar", "type": "text", "x": 340, "y": 400, "width": 80, "height": 40, "text": "Avatar"},
+    {"id": "ui-skeleton", "type": "text", "x": 430, "y": 400, "width": 80, "height": 40, "text": "Skeleton"},
+    {"id": "ui-usermenu", "type": "text", "x": 520, "y": 400, "width": 90, "height": 40, "text": "UserMenu"},
+    {"id": "ui-linkmenu", "type": "text", "x": 620, "y": 400, "width": 90, "height": 40, "text": "LinkMenu"},
+
+    {"id": "g-ctx", "type": "group", "x": 0, "y": 500, "width": 300, "height": 100, "label": "Contexts"},
+    {"id": "ctx-files", "type": "text", "x": 20, "y": 540, "width": 120, "height": 40, "text": "**FilesContext**\n(4 deps)", "color": "6"},
+    {"id": "ctx-toast", "type": "text", "x": 160, "y": 540, "width": 120, "height": 40, "text": "**ToastContext**\n(1 dep)", "color": "6"},
+
+    {"id": "g-actions", "type": "group", "x": 320, "y": 500, "width": 580, "height": 160, "label": "Server Actions"},
+    {"id": "act-s3-upload", "type": "text", "x": 340, "y": 540, "width": 100, "height": 35, "text": "uploadFile", "color": "5"},
+    {"id": "act-s3-preview", "type": "text", "x": 450, "y": 540, "width": 100, "height": 35, "text": "fetchPreview", "color": "5"},
+    {"id": "act-s3-outputs", "type": "text", "x": 560, "y": 540, "width": 100, "height": 35, "text": "getOutputs", "color": "5"},
+    {"id": "act-s3-inputs", "type": "text", "x": 670, "y": 540, "width": 110, "height": 35, "text": "getInputPreviews", "color": "5"},
+    {"id": "act-ocr-proc", "type": "text", "x": 340, "y": 590, "width": 100, "height": 35, "text": "process", "color": "2"},
+    {"id": "act-ocr-writ", "type": "text", "x": 450, "y": 590, "width": 100, "height": 35, "text": "writing", "color": "2"},
+    {"id": "act-dyn-save", "type": "text", "x": 560, "y": 590, "width": 110, "height": 35, "text": "saveSnapshot", "color": "3"},
+    {"id": "act-dyn-get", "type": "text", "x": 680, "y": 590, "width": 100, "height": 35, "text": "getSnapshot", "color": "3"},
+
+    {"id": "g-lib", "type": "group", "x": 0, "y": 680, "width": 500, "height": 100, "label": "Libraries"},
+    {"id": "lib-s3", "type": "text", "x": 20, "y": 720, "width": 100, "height": 40, "text": "**lib/s3.ts**\nS3Client"},
+    {"id": "lib-dynamo", "type": "text", "x": 140, "y": 720, "width": 120, "height": 40, "text": "**lib/dynamodb**\nDynamoDB"},
+    {"id": "lib-axios", "type": "text", "x": 280, "y": 720, "width": 100, "height": 40, "text": "**lib/axios**\nHTTP"},
+    {"id": "lib-logger", "type": "text", "x": 400, "y": 720, "width": 80, "height": 40, "text": "**logger**\nWinston"},
+
+    {"id": "g-utils", "type": "group", "x": 520, "y": 680, "width": 200, "height": 100, "label": "Utils"},
+    {"id": "util-prov", "type": "text", "x": 540, "y": 720, "width": 80, "height": 40, "text": "Providers"},
+    {"id": "util-fn", "type": "text", "x": 630, "y": 720, "width": 70, "height": 40, "text": "utils/*"},
+
+    {"id": "g-types", "type": "group", "x": 740, "y": 680, "width": 160, "height": 100, "label": "Types"},
+    {"id": "type-form", "type": "text", "x": 760, "y": 720, "width": 60, "height": 40, "text": "form"},
+    {"id": "type-svc", "type": "text", "x": 830, "y": 720, "width": 60, "height": 40, "text": "services"}
+  ],
+  "edges": [
+    {"id": "e1", "fromNode": "page-home", "toNode": "comp-home", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e2", "fromNode": "page-downloads", "toNode": "comp-downloads", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e3", "fromNode": "page-signin", "toNode": "comp-signin", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e4", "fromNode": "layout-root", "toNode": "comp-navbar", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e5", "fromNode": "layout-locale", "toNode": "ctx-toast", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e6", "fromNode": "layout-locale", "toNode": "util-prov", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e10", "fromNode": "comp-home", "toNode": "ui-button", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e11", "fromNode": "comp-home", "toNode": "ui-modal", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e12", "fromNode": "comp-home", "toNode": "ui-form", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e13", "fromNode": "comp-home", "toNode": "ui-accordion", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e14", "fromNode": "comp-home", "toNode": "ui-spinner", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e15", "fromNode": "comp-home", "toNode": "ui-tag", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e16", "fromNode": "comp-home", "toNode": "ui-inputs", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e17", "fromNode": "comp-home", "toNode": "ui-icons", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e18", "fromNode": "comp-home", "toNode": "ctx-files", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e19", "fromNode": "comp-home", "toNode": "ctx-toast", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e20", "fromNode": "comp-home", "toNode": "act-s3-upload", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e21", "fromNode": "comp-home", "toNode": "act-ocr-proc", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e30", "fromNode": "comp-downloads", "toNode": "ui-button", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e31", "fromNode": "comp-downloads", "toNode": "ui-modal", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e32", "fromNode": "comp-downloads", "toNode": "ui-table", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e33", "fromNode": "comp-downloads", "toNode": "ui-icons", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e34", "fromNode": "comp-downloads", "toNode": "act-s3-outputs", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e40", "fromNode": "comp-signin", "toNode": "ui-button", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e41", "fromNode": "comp-signin", "toNode": "ui-images", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e50", "fromNode": "comp-navbar", "toNode": "ui-button", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e51", "fromNode": "comp-navbar", "toNode": "ui-icons", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e52", "fromNode": "comp-navbar", "toNode": "ui-images", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e53", "fromNode": "comp-navbar", "toNode": "ui-usermenu", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e60", "fromNode": "ui-usermenu", "toNode": "ui-avatar", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e61", "fromNode": "ui-usermenu", "toNode": "ui-skeleton", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e62", "fromNode": "ui-usermenu", "toNode": "ctx-toast", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e70", "fromNode": "ui-form", "toNode": "ui-button", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e71", "fromNode": "ui-form", "toNode": "ui-inputs", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e72", "fromNode": "ui-form", "toNode": "ui-modal", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e80", "fromNode": "ctx-files", "toNode": "act-dyn-save", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e81", "fromNode": "ctx-files", "toNode": "act-dyn-get", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e82", "fromNode": "ctx-files", "toNode": "util-fn", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e83", "fromNode": "ctx-toast", "toNode": "ui-icons", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e90", "fromNode": "act-s3-upload", "toNode": "lib-s3", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e91", "fromNode": "act-s3-preview", "toNode": "lib-s3", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e92", "fromNode": "act-s3-outputs", "toNode": "lib-s3", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e93", "fromNode": "act-s3-inputs", "toNode": "lib-s3", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e94", "fromNode": "act-s3-upload", "toNode": "lib-logger", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e100", "fromNode": "act-ocr-proc", "toNode": "lib-axios", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e101", "fromNode": "act-ocr-writ", "toNode": "lib-axios", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e102", "fromNode": "act-ocr-proc", "toNode": "lib-logger", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e103", "fromNode": "act-ocr-proc", "toNode": "type-form", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e104", "fromNode": "act-ocr-proc", "toNode": "type-svc", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e110", "fromNode": "act-dyn-save", "toNode": "lib-dynamo", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e111", "fromNode": "act-dyn-get", "toNode": "lib-dynamo", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e112", "fromNode": "act-dyn-save", "toNode": "lib-logger", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e120", "fromNode": "lib-axios", "toNode": "lib-logger", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e121", "fromNode": "util-prov", "toNode": "ctx-files", "fromSide": "bottom", "toSide": "top"}
+  ]
+}

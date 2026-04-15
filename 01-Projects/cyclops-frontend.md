@@ -107,3 +107,6 @@ npm run dynamodb:setup:local
 
 ### State Management
 ![[cyclops-frontend-state.canvas]]
+
+### Full Call Graph
+\![[cyclops-frontend-callgraph.canvas]]
