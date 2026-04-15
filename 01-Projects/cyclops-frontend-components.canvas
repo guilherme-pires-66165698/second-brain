@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {"id": "title", "type": "text", "x": 200, "y": -80, "width": 400, "height": 50, "text": "# Cyclops Frontend - Component Detail"},
+
+    {"id": "group-pages", "type": "group", "x": 0, "y": 0, "width": 600, "height": 120, "label": "Page Components (Smart)"},
+    {"id": "home", "type": "text", "x": 20, "y": 40, "width": 170, "height": 60, "text": "**Home.tsx**\nFile upload + OCR\nMain workflow", "color": "4"},
+    {"id": "downloads", "type": "text", "x": 210, "y": 40, "width": 170, "height": 60, "text": "**Downloads.tsx**\nProcessed files list\nPreview + Download", "color": "4"},
+    {"id": "signin", "type": "text", "x": 400, "y": 40, "width": 170, "height": 60, "text": "**SignIn.tsx**\nAuthentication\nGALP SSO", "color": "4"},
+
+    {"id": "group-layout", "type": "group", "x": 0, "y": 140, "width": 300, "height": 120, "label": "Layout Components"},
+    {"id": "navbar", "type": "text", "x": 20, "y": 180, "width": 120, "height": 60, "text": "**Navbar**\nNavigation\nUser menu"},
+    {"id": "modal", "type": "text", "x": 160, "y": 180, "width": 120, "height": 60, "text": "**Modal**\nDialog overlay\nConfirmations"},
+
+    {"id": "group-forms", "type": "group", "x": 320, "y": 140, "width": 280, "height": 120, "label": "Form Components"},
+    {"id": "dynamicform", "type": "text", "x": 340, "y": 180, "width": 120, "height": 60, "text": "**DynamicForm**\nAuto-generated\nfrom OCR fields"},
+    {"id": "accordion", "type": "text", "x": 480, "y": 180, "width": 100, "height": 60, "text": "**Accordion**\nCollapsible\nsections"},
+
+    {"id": "group-inputs", "type": "group", "x": 0, "y": 280, "width": 600, "height": 120, "label": "Input Components"},
+    {"id": "textinput", "type": "text", "x": 20, "y": 320, "width": 100, "height": 50, "text": "TextInput\nString fields"},
+    {"id": "selectinput", "type": "text", "x": 140, "y": 320, "width": 100, "height": 50, "text": "SelectInput\nDropdown"},
+    {"id": "fileupload", "type": "text", "x": 260, "y": 320, "width": 100, "height": 50, "text": "FileUpload\nDrag & drop"},
+    {"id": "checkbox", "type": "text", "x": 380, "y": 320, "width": 100, "height": 50, "text": "Checkbox\nBoolean"},
+    {"id": "radio", "type": "text", "x": 500, "y": 320, "width": 80, "height": 50, "text": "Radio\nOptions"},
+
+    {"id": "group-display", "type": "group", "x": 0, "y": 420, "width": 400, "height": 120, "label": "Display Components"},
+    {"id": "table", "type": "text", "x": 20, "y": 460, "width": 110, "height": 60, "text": "**Table**\nPaginated\nSortable"},
+    {"id": "docpreview", "type": "text", "x": 150, "y": 460, "width": 110, "height": 60, "text": "**DocPreview**\nExcel viewer\nPDF preview"},
+    {"id": "tag", "type": "text", "x": 280, "y": 460, "width": 100, "height": 60, "text": "**Tag**\nStatus badge\nLabels"},
+
+    {"id": "group-feedback", "type": "group", "x": 420, "y": 420, "width": 180, "height": 120, "label": "Feedback"},
+    {"id": "spinner", "type": "text", "x": 440, "y": 460, "width": 70, "height": 50, "text": "Spinner\nLoading"},
+    {"id": "skeleton", "type": "text", "x": 520, "y": 460, "width": 70, "height": 50, "text": "Skeleton\nPlaceholder"},
+
+    {"id": "group-icons", "type": "group", "x": 0, "y": 560, "width": 600, "height": 100, "label": "Icons (15+)"},
+    {"id": "icon-download", "type": "text", "x": 20, "y": 590, "width": 80, "height": 40, "text": "Download"},
+    {"id": "icon-eye", "type": "text", "x": 110, "y": 590, "width": 60, "height": 40, "text": "Eye"},
+    {"id": "icon-trash", "type": "text", "x": 180, "y": 590, "width": 60, "height": 40, "text": "Trash"},
+    {"id": "icon-check", "type": "text", "x": 250, "y": 590, "width": 80, "height": 40, "text": "CircleCheck"},
+    {"id": "icon-warning", "type": "text", "x": 340, "y": 590, "width": 70, "height": 40, "text": "Warning"},
+    {"id": "icon-close", "type": "text", "x": 420, "y": 590, "width": 60, "height": 40, "text": "Close"},
+    {"id": "icon-more", "type": "text", "x": 490, "y": 590, "width": 90, "height": 40, "text": "+9 more..."},
+
+    {"id": "group-base", "type": "group", "x": 620, "y": 280, "width": 160, "height": 200, "label": "Base"},
+    {"id": "button", "type": "text", "x": 640, "y": 320, "width": 120, "height": 50, "text": "**Button**\nPrimary/Secondary\nDisabled states", "color": "2"},
+    {"id": "avatar", "type": "text", "x": 640, "y": 390, "width": 120, "height": 50, "text": "**Avatar**\nUser image\nInitials fallback"},
+    {"id": "logo", "type": "text", "x": 640, "y": 460, "width": 120, "height": 50, "text": "**GalpLogo**\nBrand SVG"}
+  ],
+  "edges": [
+    {"id": "e1", "fromNode": "home", "toNode": "dynamicform", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e2", "fromNode": "home", "toNode": "fileupload", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e3", "fromNode": "home", "toNode": "modal", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e4", "fromNode": "home", "toNode": "accordion", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e10", "fromNode": "downloads", "toNode": "table", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e11", "fromNode": "downloads", "toNode": "docpreview", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e12", "fromNode": "downloads", "toNode": "modal", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e20", "fromNode": "dynamicform", "toNode": "textinput", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e21", "fromNode": "dynamicform", "toNode": "checkbox", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e22", "fromNode": "dynamicform", "toNode": "selectinput", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e30", "fromNode": "signin", "toNode": "button", "fromSide": "right", "toSide": "top"},
+    {"id": "e31", "fromNode": "navbar", "toNode": "avatar", "fromSide": "bottom", "toSide": "left"}
+  ]
+}

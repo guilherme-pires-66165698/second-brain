@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {"id": "title", "type": "text", "x": 200, "y": -80, "width": 400, "height": 50, "text": "# Cyclops Frontend - API Integration"},
+
+    {"id": "group-routes", "type": "group", "x": 0, "y": 0, "width": 350, "height": 280, "label": "API Routes (/app/api/)"},
+    {"id": "health", "type": "text", "x": 20, "y": 40, "width": 140, "height": 50, "text": "**/api/health**\nGET\nHealth check", "color": "2"},
+    {"id": "auth", "type": "text", "x": 180, "y": 40, "width": 150, "height": 50, "text": "**/api/auth/[...]**\nNextAuth handlers\nGALP SSO", "color": "6"},
+    {"id": "ocr-process", "type": "text", "x": 20, "y": 110, "width": 150, "height": 70, "text": "**/api/local/ocr/process**\nPOST\nProcess documents\nExtract fields", "color": "4"},
+    {"id": "ocr-writing", "type": "text", "x": 180, "y": 110, "width": 150, "height": 70, "text": "**/api/local/ocr/writing**\nPOST\nWrite extracted data\nTo backend", "color": "4"},
+
+    {"id": "group-actions", "type": "group", "x": 380, "y": 0, "width": 300, "height": 380, "label": "Server Actions"},
+
+    {"id": "s3-label", "type": "text", "x": 400, "y": 30, "width": 260, "height": 30, "text": "**S3 Actions** (actions/s3/)"},
+    {"id": "act-upload", "type": "text", "x": 400, "y": 60, "width": 120, "height": 40, "text": "uploadFile\nPresigned PUT"},
+    {"id": "act-preview", "type": "text", "x": 540, "y": 60, "width": 120, "height": 40, "text": "fetchPreview\nPresigned GET"},
+    {"id": "act-outputs", "type": "text", "x": 400, "y": 110, "width": 120, "height": 40, "text": "getOutputs\nList processed"},
+    {"id": "act-inputs", "type": "text", "x": 540, "y": 110, "width": 120, "height": 40, "text": "getInputPreviews\nOriginal files"},
+
+    {"id": "ocr-label", "type": "text", "x": 400, "y": 170, "width": 260, "height": 30, "text": "**OCR Actions** (actions/ocr/)"},
+    {"id": "act-process", "type": "text", "x": 400, "y": 200, "width": 120, "height": 40, "text": "process\nCall OCR API", "color": "4"},
+    {"id": "act-writing", "type": "text", "x": 540, "y": 200, "width": 120, "height": 40, "text": "writing\nSubmit results", "color": "4"},
+
+    {"id": "dynamo-label", "type": "text", "x": 400, "y": 260, "width": 260, "height": 30, "text": "**DynamoDB Actions** (actions/dynamodb/)"},
+    {"id": "act-save", "type": "text", "x": 400, "y": 290, "width": 120, "height": 40, "text": "saveSnapshot\nWorking state"},
+    {"id": "act-get", "type": "text", "x": 540, "y": 290, "width": 120, "height": 40, "text": "getSnapshot\nRestore state"},
+    {"id": "act-history", "type": "text", "x": 400, "y": 340, "width": 260, "height": 30, "text": "saveFileHistory / getFilesHistory"},
+
+    {"id": "group-external", "type": "group", "x": 720, "y": 0, "width": 200, "height": 280, "label": "External Services"},
+    {"id": "s3", "type": "text", "x": 740, "y": 40, "width": 160, "height": 60, "text": "**AWS S3**\nFile storage\nRegion: eu-west-1", "color": "5"},
+    {"id": "dynamodb", "type": "text", "x": 740, "y": 120, "width": 160, "height": 60, "text": "**DynamoDB**\nUser snapshots\nFile history", "color": "5"},
+    {"id": "backend", "type": "text", "x": 740, "y": 200, "width": 160, "height": 60, "text": "**Cyclops Backend**\nOCR processing\nData validation", "color": "5"},
+
+    {"id": "group-consumers", "type": "group", "x": 0, "y": 320, "width": 350, "height": 140, "label": "Consumers (Components)"},
+    {"id": "home", "type": "text", "x": 20, "y": 360, "width": 150, "height": 80, "text": "**Home.tsx**\n- uploadFile\n- process\n- writing\n- saveSnapshot"},
+    {"id": "downloads", "type": "text", "x": 190, "y": 360, "width": 140, "height": 80, "text": "**Downloads.tsx**\n- getOutputs\n- fetchPreview"}
+  ],
+  "edges": [
+    {"id": "e1", "fromNode": "act-upload", "toNode": "s3", "fromSide": "right", "toSide": "left"},
+    {"id": "e2", "fromNode": "act-preview", "toNode": "s3", "fromSide": "right", "toSide": "left"},
+    {"id": "e3", "fromNode": "act-outputs", "toNode": "s3", "fromSide": "right", "toSide": "left"},
+
+    {"id": "e10", "fromNode": "act-save", "toNode": "dynamodb", "fromSide": "right", "toSide": "left"},
+    {"id": "e11", "fromNode": "act-get", "toNode": "dynamodb", "fromSide": "right", "toSide": "left"},
+
+    {"id": "e20", "fromNode": "act-process", "toNode": "ocr-process", "fromSide": "left", "toSide": "right"},
+    {"id": "e21", "fromNode": "act-writing", "toNode": "ocr-writing", "fromSide": "left", "toSide": "right"},
+    {"id": "e22", "fromNode": "ocr-process", "toNode": "backend", "fromSide": "right", "toSide": "left", "label": "calls"},
+    {"id": "e23", "fromNode": "ocr-writing", "toNode": "backend", "fromSide": "right", "toSide": "left", "label": "calls"},
+
+    {"id": "e30", "fromNode": "home", "toNode": "act-upload", "fromSide": "top", "toSide": "bottom"},
+    {"id": "e31", "fromNode": "home", "toNode": "act-process", "fromSide": "top", "toSide": "bottom"},
+    {"id": "e32", "fromNode": "downloads", "toNode": "act-outputs", "fromSide": "top", "toSide": "bottom"}
+  ]
+}

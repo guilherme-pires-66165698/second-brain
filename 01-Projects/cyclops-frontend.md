@@ -88,8 +88,22 @@ npm run dynamodb:setup:local
 
 #project #galp #nextjs #react #typescript #ocr
 
-## Architecture Graph
+## Architecture Diagrams
 
-\![[cyclops-frontend-graph.canvas]]
+### File Structure
+![[cyclops-frontend-graph.canvas]]
 
+### User Flow
 ![[cyclops-frontend-flow.canvas]]
+
+### Data Flow
+![[cyclops-frontend-dataflow.canvas]]
+
+### Components
+![[cyclops-frontend-components.canvas]]
+
+### API Integration
+![[cyclops-frontend-api.canvas]]
+
+### State Management
+![[cyclops-frontend-state.canvas]]
