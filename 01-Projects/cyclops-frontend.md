@@ -91,3 +91,5 @@ npm run dynamodb:setup:local
 ## Architecture Graph
 
 \![[cyclops-frontend-graph.canvas]]
+
+![[cyclops-frontend-flow.canvas]]

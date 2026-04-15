@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {"id": "title", "type": "text", "x": 300, "y": -80, "width": 300, "height": 50, "text": "# Cyclops Frontend - User Flow"},
+
+    {"id": "start", "type": "text", "x": 0, "y": 0, "width": 120, "height": 50, "text": "**START**\nUser Access", "color": "1"},
+
+    {"id": "auth-check", "type": "text", "x": 180, "y": 0, "width": 140, "height": 50, "text": "Auth Check\n(NextAuth)", "color": "3"},
+
+    {"id": "signin", "type": "text", "x": 180, "y": 100, "width": 140, "height": 60, "text": "**Sign In**\n`/sign-in`\nGALP SSO", "color": "6"},
+
+    {"id": "home", "type": "text", "x": 380, "y": 0, "width": 160, "height": 60, "text": "**Home**\n`/`\nFile Upload", "color": "4"},
+
+    {"id": "select-type", "type": "text", "x": 380, "y": 120, "width": 160, "height": 50, "text": "1. Select File Type\n(dropdown)"},
+
+    {"id": "upload", "type": "text", "x": 380, "y": 200, "width": 160, "height": 50, "text": "2. Upload Files\n(drag & drop)"},
+
+    {"id": "s3-upload", "type": "text", "x": 600, "y": 200, "width": 140, "height": 50, "text": "Upload to S3\n(presigned URL)", "color": "5"},
+
+    {"id": "process", "type": "text", "x": 380, "y": 280, "width": 160, "height": 50, "text": "3. Process OCR\n(click button)"},
+
+    {"id": "ocr-api", "type": "text", "x": 600, "y": 280, "width": 140, "height": 60, "text": "OCR API Call\n`/api/local/ocr`\nProcess documents", "color": "5"},
+
+    {"id": "review", "type": "text", "x": 380, "y": 360, "width": 160, "height": 60, "text": "4. Review Results\n(DynamicForm)\nEdit extracted data"},
+
+    {"id": "submit", "type": "text", "x": 380, "y": 450, "width": 160, "height": 50, "text": "5. Submit\n(confirm data)"},
+
+    {"id": "dynamo-save", "type": "text", "x": 600, "y": 450, "width": 140, "height": 50, "text": "Save to\nDynamoDB", "color": "5"},
+
+    {"id": "success", "type": "text", "x": 380, "y": 530, "width": 160, "height": 50, "text": "Success Toast\n(notification)", "color": "2"},
+
+    {"id": "downloads", "type": "text", "x": 100, "y": 530, "width": 160, "height": 60, "text": "**Downloads**\n`/downloads`\nView processed files", "color": "4"},
+
+    {"id": "table-list", "type": "text", "x": 100, "y": 620, "width": 160, "height": 50, "text": "Files Table\n(paginated list)"},
+
+    {"id": "preview", "type": "text", "x": 100, "y": 700, "width": 160, "height": 50, "text": "Preview File\n(Modal + DocPreview)"},
+
+    {"id": "s3-fetch", "type": "text", "x": 300, "y": 700, "width": 140, "height": 50, "text": "Fetch from S3\n(presigned URL)", "color": "5"},
+
+    {"id": "download", "type": "text", "x": 100, "y": 780, "width": 160, "height": 50, "text": "Download File\n(Excel/PDF)", "color": "2"},
+
+    {"id": "navbar", "type": "text", "x": 700, "y": 0, "width": 140, "height": 100, "text": "**Navbar**\n- Logo\n- Home link\n- Downloads link\n- User menu\n- Language switch", "color": "3"}
+  ],
+  "edges": [
+    {"id": "e1", "fromNode": "start", "toNode": "auth-check", "fromSide": "right", "toSide": "left"},
+    {"id": "e2", "fromNode": "auth-check", "toNode": "signin", "fromSide": "bottom", "toSide": "top", "label": "not authenticated"},
+    {"id": "e3", "fromNode": "auth-check", "toNode": "home", "fromSide": "right", "toSide": "left", "label": "authenticated"},
+    {"id": "e4", "fromNode": "signin", "toNode": "home", "fromSide": "right", "toSide": "left"},
+
+    {"id": "e10", "fromNode": "home", "toNode": "select-type", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e11", "fromNode": "select-type", "toNode": "upload", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e12", "fromNode": "upload", "toNode": "s3-upload", "fromSide": "right", "toSide": "left"},
+    {"id": "e13", "fromNode": "upload", "toNode": "process", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e14", "fromNode": "process", "toNode": "ocr-api", "fromSide": "right", "toSide": "left"},
+    {"id": "e15", "fromNode": "process", "toNode": "review", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e16", "fromNode": "review", "toNode": "submit", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e17", "fromNode": "submit", "toNode": "dynamo-save", "fromSide": "right", "toSide": "left"},
+    {"id": "e18", "fromNode": "submit", "toNode": "success", "fromSide": "bottom", "toSide": "top"},
+
+    {"id": "e20", "fromNode": "home", "toNode": "downloads", "fromSide": "left", "toSide": "top", "label": "navigate"},
+    {"id": "e21", "fromNode": "success", "toNode": "downloads", "fromSide": "left", "toSide": "right", "label": "view results"},
+    {"id": "e22", "fromNode": "downloads", "toNode": "table-list", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e23", "fromNode": "table-list", "toNode": "preview", "fromSide": "bottom", "toSide": "top", "label": "click eye"},
+    {"id": "e24", "fromNode": "preview", "toNode": "s3-fetch", "fromSide": "right", "toSide": "left"},
+    {"id": "e25", "fromNode": "table-list", "toNode": "download", "fromSide": "bottom", "toSide": "top", "label": "click download"},
+
+    {"id": "e30", "fromNode": "navbar", "toNode": "home", "fromSide": "left", "toSide": "right"},
+    {"id": "e31", "fromNode": "navbar", "toNode": "downloads", "fromSide": "bottom", "toSide": "right"}
+  ]
+}
