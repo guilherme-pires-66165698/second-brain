@@ -87,3 +87,7 @@ npm run dynamodb:setup:local
 ## Tags
 
 #project #galp #nextjs #react #typescript #ocr
+
+## Architecture Graph
+
+\![[cyclops-frontend-graph.canvas]]
