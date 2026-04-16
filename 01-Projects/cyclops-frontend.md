@@ -110,3 +110,10 @@ npm run dynamodb:setup:local
 
 ### Full Call Graph
 \![[cyclops-frontend-callgraph.canvas]]
+
+### Graphify Knowledge Graph
+
+Generated with [Graphify](https://github.com/safishamsi/graphify) - 232 nodes, 133 edges, 113 communities
+
+- [[cyclops-frontend-graph/GRAPH_REPORT|Graph Report]]
+- [[cyclops-frontend-graph/graph.json|Raw Graph Data]]
